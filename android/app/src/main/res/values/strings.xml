@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Yılan Oyunu</string>
+    <string name="title_activity_main">Yılan Oyunu</string>
+    <string name="package_name">com.arda.yilan</string>
+    <string name="custom_url_scheme">com.arda.yilan</string>
+</resources>
