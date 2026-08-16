@@ -468,17 +468,53 @@ function watchRewardAd(){
 
 if(continueUsed)return;
 
-// Geliştirme testi
-alert(
-"TEST REKLAMI\n\n" +
-"APK sürümünde burada AdMob ödüllü reklam açılacak."
-);
+const button=document.getElementById("rewardButton");
+
+button.disabled=true;
+button.textContent="⏳ Reklam hazırlanıyor...";
+
+if(window.AdMob){
+
+window.AdMob.showRewarded();
+
+}else{
+
+button.disabled=false;
+button.textContent="📺 Reklam izle ve devam et";
+
+alert("Reklam sistemi başlatılamadı.");
+
+}
+
+}
+
+
+// Reklam tamamlandı
+window.adRewardEarned=function(){
 
 continueUsed=true;
 
+const button=document.getElementById("rewardButton");
+
+button.disabled=false;
+button.textContent="📺 Reklam izle ve devam et";
+
 continueGame();
 
-}
+};
+
+
+// Reklam yüklenemedi
+window.adRewardFailed=function(){
+
+const button=document.getElementById("rewardButton");
+
+button.disabled=false;
+button.textContent="📺 Reklam izle ve devam et";
+
+alert("Reklam henüz hazır değil.");
+
+};
 
 
 // Reklam ödülü verildiğinde
