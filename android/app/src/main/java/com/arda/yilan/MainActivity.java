@@ -15,8 +15,8 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 
 public class MainActivity extends BridgeActivity {
 
-    private static final String TEST_REWARDED_ID =
-            "ca-app-pub-3940256099942544/5224354917";
+    private static final String REWARDED_AD_ID =
+            "ca-app-pub-5076362961536868/2667866213";
 
     private RewardedAd rewardedAd;
 
@@ -40,7 +40,7 @@ public class MainActivity extends BridgeActivity {
 
         RewardedAd.load(
                 this,
-                TEST_REWARDED_ID,
+                REWARDED_AD_ID,
                 request,
                 new RewardedAdLoadCallback() {
 
