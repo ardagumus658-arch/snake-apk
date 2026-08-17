@@ -22,7 +22,7 @@ public class AdMobRewardedPlugin extends Plugin {
     private boolean loading = false;
 
     private static final String AD_UNIT_ID =
-            "ca-app-pub-5076362961536868/1228691849";
+            "ca-app-pub-5076362961536868/2667866213";
 
     @PluginMethod
     public void load(PluginCall call) {
